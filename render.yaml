@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: traffic-seo-analytics
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # paste your Neon / Supabase connection string in the Render dashboard
